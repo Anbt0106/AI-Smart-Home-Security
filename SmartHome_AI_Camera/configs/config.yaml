@@ -1,0 +1,21 @@
+camera:
+  source: 0  # 0 for webcam, or RTSP URL
+  width: 640
+  height: 480
+
+detection:
+  model_path: "yolov8n.pt"
+  conf_threshold: 0.5
+  roi: [100, 100, 500, 400]  # [x1, y1, x2, y2]
+
+face_recognition:
+  encodings_path: "assets/encodings.pickle"
+  tolerance: 0.6
+  unknown_threshold_seconds: 10
+
+telegram:
+  bot_token: "8246476696:AAHCYYuHAvo2O_iTz2-tuAewMXrzBosifGY"
+  chat_id: "5385098660"
+
+audio:
+  sound_dir: "assets/sounds"

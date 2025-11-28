@@ -1,0 +1,7 @@
+.venv/
+.idea/
+__pycache__/
+*.pyc
+extracted_text.txt
+*.DS_Store
+SmartHome_AI_Camera/assets/
