@@ -1,6 +1,0 @@
-opencv-python
-ultralytics
-face_recognition
-pygame
-pyyaml
-requests

@@ -1,0 +1,45 @@
+camera:
+  source: "E:\\KLTN\\Video\\Avenue_Dataset\\Avenue Dataset\\testing_videos\\03.avi"
+  width: 480
+  height: 360
+
+detection:
+  model_path: "yolo11n.pt"
+  conf_threshold: 0.5
+  roi: [50, 50, 430, 310]  # [x1, y1, x2, y2] Adjusted for 480x360
+
+tracking:
+  type: "deepsort"
+  max_age: 30
+  n_init: 3
+  nn_budget: 100
+  max_cosine_distance: 0.2
+  embedder: "mobilenet"
+  embedder_gpu: True
+
+anomaly:
+  dwell_time_threshold: 5.0
+  running_speed_thresh: 200.0  # px/s
+  violence:
+    model_path: "models/violence/Violence_Yolov8.pt"
+    conf: 0.5
+    iou: 0.45
+  fall:
+    model_path: "models/fall/Fall_Yolov11.pt"
+    conf: 0.5
+    iou: 0.45
+    ratio_drop_thresh: 0.8
+    delta_y_thresh: 100
+    t_max: 2.0  # seconds
+
+face_recognition:
+  encodings_path: "data/assets/encodings.pickle"
+  tolerance: 0.6
+  unknown_threshold_seconds: 10
+
+telegram:
+  bot_token: "8246476696:AAHCYYuHAvo2O_iTz2-tuAewMXrzBosifGY"
+  chat_id: "5385098660"
+
+audio:
+  sound_dir: "data/assets/sounds"

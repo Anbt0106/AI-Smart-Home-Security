@@ -1,0 +1,8 @@
+opencv-python
+ultralytics
+pygame
+pyyaml
+requests
+insightface
+onnxruntime
+deep-sort-realtime
